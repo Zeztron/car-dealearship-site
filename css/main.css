@@ -1,6 +1,6 @@
 :root {
     --mainBlue: #101d2c;
-    --transparentBlue: #101d2c93;
+    --transparentBlue: rgb(16, 29, 44, 0.7);
     --mainBlack: #292f36;
     --mainGrey: #aaa;
     --mainGold: #c69963;
@@ -10,6 +10,14 @@
 body {
     font-family: "Raleway", sans-serif;
     color: var(--mainBlack);
+}
+
+/* section title */
+.section-title--special {
+    background: var(--transparentBlue);
+    color: white;
+    padding: 0.5rem 2rem;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
 }
 
 /* Navbar */
