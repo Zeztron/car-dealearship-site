@@ -1,9 +1,10 @@
 :root {
-    --mainBlue: #131C2A;
-    --transparentBlue: rgba(0, 39, 62, 0.7);
+    --mainBlue: #101d2c;
+    --transparentBlue: #101d2c93;
     --mainBlack: #292f36;
-    --mainGrey: #f8f8f8;
-    --mainGold: #BE9A6A;
+    --mainGrey: #aaa;
+    --mainGold: #c69963;
+    --secondGold: #B28451;
 }
 
 body {
@@ -40,4 +41,45 @@ body {
 .nav-icon:hover {
     color: var(--mainBlack);
     text-decoration: none;
+}
+
+/* header */
+.header {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    color: #fff;
+}
+
+.height-max {
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url("../img/headerBcg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title-heading {
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 0.3rem solid var(--mainGold);
+}
+
+.title {
+    font-weight: 300;
+    font-size: 1.9rem;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.title-icon {
+    color: var(--mainGold);
+    text-decoration: none !important;
+    transition: all .3s;
+}
+
+.title-icon:hover {
+    color: var(--secondGold);
 }
