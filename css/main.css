@@ -1,0 +1,43 @@
+:root {
+    --mainBlue: #131C2A;
+    --transparentBlue: rgba(0, 39, 62, 0.7);
+    --mainBlack: #292f36;
+    --mainGrey: #f8f8f8;
+    --mainGold: #BE9A6A;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    color: var(--mainBlack);
+}
+
+/* Navbar */
+.navbar-toggler {
+    outline-color: var(--mainBlue) !important;
+}
+
+.navbar-icon {
+    font-size: 2rem;
+    color: var(--mainBlue);
+}
+
+.nav-link {
+    color: var(--mainBlack);
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--mainBlue);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--mainBlue);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.nav-icon:hover {
+    color: var(--mainBlack);
+    text-decoration: none;
+}
