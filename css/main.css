@@ -2,7 +2,7 @@
     --mainBlue: #101d2c;
     --transparentBlue: rgb(16, 29, 44, 0.7);
     --mainBlack: #292f36;
-    --mainGrey: #aaa;
+    --mainGrey: #d8d8d8;
     --mainGold: #c69963;
     --secondGold: #B28451;
 }
@@ -106,5 +106,17 @@ body {
 }
 
 .title-icon:hover {
+    color: var(--secondGold);
+}
+
+/* skills */
+.skills-icon {
+    font-size: 3rem;
+    color: var(--mainGold);
+    background: var(--mainGrey);
+    transition: all .3s;
+}
+
+.skills-icon:hover {
     color: var(--secondGold);
 }
