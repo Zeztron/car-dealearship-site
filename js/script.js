@@ -29,13 +29,13 @@ const CreateCars = (() => {
 
     // produce cars function
     function produceCars() {
-        makeCar("mercedes", "german", "img/car-german-1.jpeg");
-        makeCar("bmw", "german", "img/car-german-2.jpeg");
-        makeCar("bmw", "german", "img/car-german-3.jpeg", false);
-        makeCar("bmw", "german", "img/car-german-4.jpeg", false);
-        makeCar("bmw", "german", "img/car-german-5.jpeg");
-        makeCar("chevy", "american", "img/car-american-1.jpeg");
-        makeCar("chevy", "american", "img/car-american-2.jpeg");
+        makeCar("mercedes", "german", "img/car-german-1.jpeg", true, "SLK AMG", 150000, "coupe", "manual", 20);
+        makeCar("bmw", "german", "img/car-german-2.jpeg", true, "X5", 60000, "SUV", "automatic", 24);
+        makeCar("bmw", "german", "img/car-german-3.jpeg", false, "M2", 54500, "coupe", "manual", 25);
+        makeCar("bmw", "german", "img/car-german-4.jpeg", false, "M3", 66000, "sedan", "automatic", 25);
+        makeCar("bmw", "german", "img/car-german-5.jpeg", true, "M2", 55000, "sedan", "automatic", 25);
+        makeCar("chevy", "american", "img/car-american-1.jpeg", true);
+        makeCar("chevy", "american", "img/car-american-2.jpeg", true);
         makeCar("chevy", "american", "img/car-american-3.jpeg", false);
         makeCar("chevy", "american", "img/car-american-4.jpeg", false);
         makeCar("chevy", "american", "img/car-american-5.jpeg", false);
@@ -50,10 +50,8 @@ const CreateCars = (() => {
     }
 
 })();
-
 // console.log(CreateCars.cars);
 // console.log(CreateCars.specialCars)
-
 const DisplaySpecialCars = ((CreateCars) => {
     const specialCars = CreateCars.specialCars;
     // console.log(specialCars);
@@ -86,4 +84,45 @@ const DisplaySpecialCars = ((CreateCars) => {
         }
     })
     
+})(CreateCars);
+
+const DisplayCars = ((CreateCars) => {
+    // Display all the cars
+    const cars = CreateCars.cars;
+    // Car container
+    const inventory = document.querySelector(".inventory-container");
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        inventory.innerHTML = '';
+        let output = '';
+        cars.forEach(car => {
+            output += `
+                <div class="col-10 mx-auto my-3 col-md-6 col-lg-4 single-car ${car.country}">
+                    <div class="card car-card">
+                        <img src="${car.img}" alt="German Car 1" class="card-img-top car-img">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <div class="car-info d-flex justify-content-between">
+                                <!-- first flex child -->
+                                <div class="car-text text-uppercase">
+                                    <h6 class="font-weight-bold">${car.make}</h6>
+                                    <h6>${car.model}</h6>
+                                </div>
+                                <!-- second flex child -->
+                                <h5 class="car-value align-self-center py-2 mx-3">
+                                    $ <span class="car-price">${car.price}</span>
+                                </h5>
+                            </div>
+                        </div>
+                        <!-- end of card body -->
+                        <div class="card-footer d-flex justify-content-between">
+                            <p class="text-capitalize"><span><i class="fas fa-car"></i></span> ${car.type}</p>
+                            <p class="text-capitalize"><span><i class="fas fa-cogs"></i></span> ${car.trans}</p>
+                            <p><span><i class="fas fa-gas-pump"></i></span> ${car.gas}</p>
+                        </div>
+                    </div>
+                </div>`;
+        })
+        inventory.innerHTML += output;
+    })
 })(CreateCars);
