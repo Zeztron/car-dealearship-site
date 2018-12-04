@@ -368,3 +368,24 @@ body {
     background: var(--transparentBlue);
     z-index: -2;
 }
+
+.service {
+    background: var(--mainBlue);
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.service:hover {
+    background: var(--transparentBlue);
+    padding-left: 2.2rem !important;
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: var(--mainGold);
+    transition: all .5s ease-in-out;
+}
+
+.service:hover .service-icon {
+    color: var(--secondGold);
+}
