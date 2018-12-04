@@ -3,7 +3,7 @@
     --transparentBlue: rgb(16, 29, 44, 0.7);
     --mainBlack: #292f36;
     --mainGrey: #d8d8d8;
-    --mainGold: #c69963;
+    --mainGold: rgb(198, 153, 99);
     --secondGold: #B28451;
 }
 
@@ -141,4 +141,36 @@ body {
     height: 0.2rem;
     background: var(--mainBlue);
     margin: 1rem auto;
+}
+
+/* Inventory */
+.inventory {
+    background: var(--mainGrey);
+}
+
+.car-card {
+    border-radius: 0 !important;
+    box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: all .3s;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.car-img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.car-value {
+    background: var(--mainBlue);
+    color: #fff;
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+    padding: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+
+.car-value:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
