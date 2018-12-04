@@ -146,7 +146,7 @@ body {
 
 /* Inventory */
 .inventory {
-    background: var(--mainGrey);
+    background: linear-gradient(to bottom, #ffffff 0%,#d8d8d8 25%,#d8d8d8 51%,#d8d8d8 75%,#ffffff 100%);
 }
 
 .car-card {
@@ -207,7 +207,7 @@ body {
 
 /* featured */
 .featured {
-    background: var(--mainGrey);
+    background: linear-gradient(to bottom, #ffffff 0%,#d8d8d8 25%,#d8d8d8 51%,#d8d8d8 75%,#ffffff 100%);
 }
 
 .featured-item {
@@ -387,5 +387,44 @@ body {
 }
 
 .service:hover .service-icon {
+    color: var(--secondGold);
+}
+
+/* quotes */
+.customer-card-body {
+    margin-top: -4rem !important;
+}
+
+.customer-img {
+    border: 0.5rem solid white;
+}
+
+.customer-name {
+    color: var(--mainBlue);
+    margin: 0.5rem;
+}
+
+.customer-icon {
+    font-size: 2rem;
+    color: var(--mainBlue);
+}
+
+.customer-quote {
+    max-width: 90%;
+}
+
+/* footer */
+.footer {
+    background: var(--mainBlue);
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--mainGold);
+    transition: all .3s ease-in-out;
+}
+
+.footer-icon:hover {
     color: var(--secondGold);
 }
