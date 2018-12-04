@@ -300,6 +300,27 @@ body {
     transform: scale(1);
 }
 
+/* modal */
+.showcase {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: var(--transparentBlue);
+    display: none;
+}
+
+.showcase-close {
+    font-size: 2rem;
+    color: var(--mainGold);
+}
+
+.showcase-show {
+    display: flex;
+}
+
 /* contact */
 .contact {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/headerBcg.jpeg");
