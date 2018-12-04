@@ -37,6 +37,18 @@ body {
 }
 
 /* Navbar */
+.navbar {
+    transition: all .7s ease-in-out;
+}
+
+.navbar-change {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background: var(--mainGold);
+    z-index: 100;
+}
+
 .navbar-toggler {
     outline-color: var(--mainBlue) !important;
 }

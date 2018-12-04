@@ -1,6 +1,19 @@
-// Preloader
-window.addEventListener("load", () => document.querySelector(".preloader")
-    .classList.add("hidePreloader"));
+const Events = (() => {
+    // sticky navbar
+    const navbar = document.querySelector(".navbar");
+    // show and hide preloader
+    window.addEventListener("load", () => document.querySelector(".preloader").classList.add("hidePreloader"));
+    // Add class to navbar
+    window.addEventListener("scroll", () => {
+        // Get the height
+        let height = document.documentElement.scrollTop || window.pageYOffset;
+        // console.log(height);
+        (height > 76) ? navbar.classList.add("navbar-change") : navbar.classList.remove("navbar-change");
+
+    })
+    
+    
+})();
 
 const CreateCars = (() => {
     // Car data
@@ -169,3 +182,4 @@ const Gallery = (() => {
         showcase.classList.remove("showcase-show");
     })
 })();
+
