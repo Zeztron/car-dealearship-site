@@ -299,3 +299,38 @@ body {
 .gallery-item:hover:after {
     transform: scale(1);
 }
+
+/* contact */
+.contact {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/headerBcg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-input {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background: transparent;
+    border-color: var(--mainGold);
+    color: var(--mainGold) !important;
+}
+
+.contact-input::placeholder {
+    color: var(--mainGold);
+}
+
+.contact-input:focus {
+    background: transparent;
+    border-color: var(--mainGold);
+}
+
+.contact-btn {
+    text-transform: uppercase;
+    color: var(--mainGold);
+    border-color: var(--mainGold);
+}
+
+.contact-btn:hover {
+    background: var(--mainGold);
+}
