@@ -5,6 +5,7 @@
     --mainGrey: #d8d8d8;
     --mainGold: rgb(198, 153, 99);
     --secondGold: #B28451;
+    --transparentGold: rgba(178, 133, 81, 0.7);
 }
 
 body {
@@ -173,4 +174,33 @@ body {
 
 .car-value:hover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* question */
+.question {
+    background: url("../img/questionBcg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.question-grey {
+    background: var(--transparentBlue);
+    color: white;
+}
+
+.question-yellow {
+    background: var(--transparentGold);
+    color: var(--mainBlue);
+}
+
+.question-icon {
+    font-size: 4rem;
+    color: var(--mainGrey);
+    transition: all .3s ease-in-out;
+}
+
+.question-icon:hover {
+    transform: translateY(-2%);
+    color: white;
 }
