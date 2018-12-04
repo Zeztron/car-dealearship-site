@@ -12,6 +12,21 @@ body {
     color: var(--mainBlack);
 }
 
+/* preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--mainGrey);
+    z-index: 999;
+}
+
+.hidePreloader {
+    display: none !important;
+}
+
 /* section title */
 .section-title--special {
     background: var(--transparentBlue);
@@ -119,4 +134,11 @@ body {
 
 .skills-icon:hover {
     color: var(--secondGold);
+}
+
+.skills-underline {
+    width: 4rem;
+    height: 0.2rem;
+    background: var(--mainBlue);
+    margin: 1rem auto;
 }
