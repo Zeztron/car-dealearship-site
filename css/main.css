@@ -315,6 +315,7 @@ body {
 .showcase-close {
     font-size: 2rem;
     color: var(--mainGold);
+    cursor: pointer;
 }
 
 .showcase-show {
